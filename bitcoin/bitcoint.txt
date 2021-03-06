@@ -1,0 +1,56 @@
+## Block Chain (Linked List)
+
+1. Analogue: Mosquito getting stuck in amber. Getting deeper in as time goes by (block chain units). 
+2. The deeper in the block chain a ledger is, the harder it gets to change it put it there? 
+3. Encryption works by one way hash functions - SHA2 is used for the Merklee Tree (hash tree of transactions)
+
+The block chain is a linked list, each block being the Merkle Tree Hash of the transaction the occurred.  Each block or node in the linked list stores the total hash of the previous node. This way it's easy to see if the block chain (the linked list that represents all transactions) has been tampered with, because it can see if it matches the hash the next node's hash & can check if that block has been tampered with by check the next one in the chain & so on. 
+
+You can verify the integrity of the block chain by checking it against other nodes within the Bitcoin Network since it's P2P not Server-Client
+
+Insight: Cryptocurrency (Bitcoin) is P2P in that each peer has the full file on their computer. Server-Client is like the old model?
+
+A decentralized database
+
+## Bitcoin
+
+1. Only 21million bitcoin will be created. Finite supply, which means there can't be inflation.  Not all 21million are accessible atm. Over time more is released into circulation, 
+2. The bitcoin is composed of a network of computers. Each one being a Node. Each node stores a copy of the whole blockchain. Each time a new block of transactions is added,  all nodes in the bitcoin network (every device which has a copy of the block chain) is updated.
+3. Bitcoin solved the 'Double Spending Problem', which is a problem with Digital Based Currency.  That is I can send you money, but say I've still got it, causing inflation. 
+4. Your bitcoin is not explicitly stored anywhere. It is implicitly created by walking the linked list (the block chain) to work out all input & output associated with you public key.  All bitcoin resides in the block chain. There is just 21million bitcoins in one account to start with.
+
+The power of Bitcoin is that there is no federal reserve (singular place of storeage), it's security comes from being distributed across all the nodes, so it's very hard to tamper with transactions. 
+
+There is a limit set for transaction speed so the network doesn't get flooded with transactions. Say 1 transaction/second. By doing this you maintain that most nodes in the network can keep up, allowing not just the biggest computers in the network to stay on board (which would collapse it back down to central authority like in current currency system).
+
+Bitcoin is ready for 'coffee' transactions, since each node stores the whole transaction history since t=0, computers would quickly run out of memory to store the block chain. 
+
+## Merkle Tree
+
+The block chain is a Merkle Tree, where each 'block' or node in the tree stores the previous hash of the last block. 
+
+The bottom of the tree - the leaves - are the original data files, like files in a folder. To create the Merkle Tree, you hash each file (using a hash function like SHA-2 (which is one way)), then you hash two of the hashes together, and keep going till there is only one node at the top.  The top hash is important - it represents the 'check sum' or the integrity of the files. 
+
+In the top of a hash tree there is a top hash (or root hash or master hash). Before downloading a file on a p2p network, in most cases the top hash is acquired from a trusted source, for instance a friend or a web site that is known to have good recommendations of files to download. When the top hash is available, the hash tree can be received from any non-trusted source, like any peer in the p2p network. Then, the received hash tree is checked against the trusted top hash, and if the hash tree is damaged or fake, another hash tree from another source will be tried until the program finds one that matches the top hash.[11] (Wikipedia)
+
+## Ways to Store Bitcoin
+
+### Hardware Wallet
+
+Storing your money on a physical device like a usb stick. Storing it on a computer can be risky due to viruses and malware.
+
+## Cold Storeage
+
+1. Writing your key out on a piece of paper and putting it in a vault. 
+2. Remebering your key 
+
+
+## References
+
+whitepaper 
+
+Nick Szabo on Tim Ferris podcast
+https://tim.blog/2017/06/04/nick-szabo/
+
+Naval Ravikant on Tim Ferris podcast
+https://tim.blog/2020/10/14/naval/
